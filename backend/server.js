@@ -1,12 +1,9 @@
+require('dotenv/config')
+const mongoose = require('mongoose')
+
 const { PORT = 5001 } = process.env
 
-const cors = require("cors")
-const express = require('express')
-
-require('dotenv/config')
-
-const app = express()
-app.use(cors())
+const app = require('./app')
 
 const listener = () => {
   console.log("it works")
