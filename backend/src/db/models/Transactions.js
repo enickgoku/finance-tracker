@@ -1,20 +1,16 @@
 const mongoose = require('mongoose')
 
-const User = mongoose.Schema({
-  name: {
-    type: String,
+const Transaction = mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   },
-  age: {
+  amount: {
     type: Number,
     required: true,
   },
-  email: {
-    type: String,
-    required: true,
-    lowercase: true,
-  },
-  password: {
+  description: {
     type: String,
     required: true,
   },
@@ -28,4 +24,4 @@ const User = mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('User', User)
+module.exports = mongoose.model('Transaction', Transaction)
