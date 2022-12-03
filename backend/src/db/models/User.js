@@ -20,6 +20,7 @@ const User = mongoose.Schema({
   },
   createdAt: {
     type: Date,
+    immutable: true,
     default: () => Date.now(),
   },
   updataedAt: {
