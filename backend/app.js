@@ -12,9 +12,11 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-// app.use("/", () => {
-//   console.log('works')
-// })
+//define a home route that collects all data from the database
+
+app.use("/", (req, res) => {
+  res.send("Hello World")
+})
 
 app.use(notFound)
 app.use(errorHandler)
