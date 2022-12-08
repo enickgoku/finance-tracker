@@ -1,3 +1,5 @@
+// This is where you define the data to be seeded into the database
+
 const userSeeds = [
   {
     firstName: 'John',
